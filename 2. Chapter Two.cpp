@@ -521,4 +521,140 @@ int main()
 
 
 
-//
+// 2 - 5.6
+// 等腰三角形
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+	int length;
+	cout << "Please enter the base length of isosceles triangle : ";
+	cin >> length;
+
+	cout << endl;
+	int i, j;
+	if (length % 2 == 0) {
+		
+		for (i = 0; i != length / 2; ++i) {
+
+			for (j = 0; j != length; ++j) {
+
+				if (i == length / 2 - 1 || j == length / 2 - i - 1 || j == length / 2 + i) {
+					cout << '*';
+				}
+				else {
+					cout << ' ';
+				}
+			}
+			cout << endl;
+		}
+	}
+	else {
+
+		for (i = 0; i != length / 2 + 1; ++i) {
+
+			for (j = 0; j != length; ++j) {
+
+				if (i == 0 && j == length / 2) {
+					cout << '*';
+				}
+				else {
+					if (i == length / 2 || j == length / 2 - i || j == length / 2 + i) {
+						cout << '*';
+					}
+					else {
+						cout << ' ';
+					}
+				}
+			}
+			cout << endl;
+		}
+	}
+	return 0;
+}
+
+
+
+// 2 - 7
+// 依次输出10到-5的所有整数
+
+#include<iostream>
+//#include<string>
+using namespace std;
+
+int main()
+{
+	int i = 11;
+	while (i != -5) {
+		cout << --i << endl;
+	}
+	return 0;
+}
+
+
+
+// 2 - 8
+// 计算1到9的乘积
+
+#include<iostream>
+//#include<string>
+using namespace std;
+
+int main()
+{
+	int i = 1;
+	int sum = 1;
+	while (i != 10) {
+		sum *= i;
+		i++;
+		cout << sum << endl;
+	}
+	return 0;
+}
+
+
+
+// 2 - 9
+// 比较用户输入的两个值
+
+#include<iostream>
+//#include<string>
+using namespace std;
+
+int main()
+{
+	int a, b;
+	char choice = 'Y';
+	
+	//加了让用户选择是否继续的循环
+	while (choice == 'Y' || choice == 'y') {
+
+		cout << "Please enter the number you want to compare : ";
+		cin >> a >> b;
+
+		if (a == b)
+			cout << "They are same." << endl;
+		else {
+			if (a < b)
+				cout << a << " is smaller than " << b << "." << endl;
+			else
+				cout << a << " is bigger than " << b << "." << endl;
+		}
+
+		cout << endl;
+
+		cout << "Do you want to repeat ? (Y/N) ";
+		cin >> choice;
+		cout << endl;
+	}
+
+
+
+	return 0;
+}
+
+
+
