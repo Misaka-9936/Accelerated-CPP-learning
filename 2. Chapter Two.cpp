@@ -484,3 +484,37 @@ int main()
 
 
 
+// 2 - 5.5
+// 直角三角形
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+	int a = 1;
+	int length;
+	cout << "Please enter the length of right triangle : ";
+	cin >> length;
+
+	cout << endl;
+
+	for (int i = 0; i != length; ++i) {
+
+		int j = 0;
+		while (j != a) {
+			
+			if (i == 0 || i == length - 1 || j == 0 || j == a - 1) {
+				cout << '*';
+			}
+			else {
+				cout << ' ';
+			}
+			++j;
+		}
+		cout<<endl;
+		++a;
+	}
+	return 0;
+}
